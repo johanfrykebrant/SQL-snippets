@@ -20,4 +20,5 @@ SELECT FileSizeChangedEvent.Data.value('(/event/@timestamp)[1]', 'DATETIME') AS 
 	,FileSizeChangedEvent.Data.value('(/event/data/text)[1]', 'VARCHAR(MAX)') AS SystemDatabaseFileType
 	,FileSizeChangedEvent.Data.value('(/event/data/value)[5]', 'VARCHAR(MAX)') AS SystemIsAutomaticGrowth
 	,FileSizeChangedEvent.Data
-FROM FileSizeChangedEvent;
+FROM FileSizeChangedEvent
+ORDER BY EvenTime DESC;
