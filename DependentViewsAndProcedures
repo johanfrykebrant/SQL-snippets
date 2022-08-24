@@ -1,4 +1,4 @@
-DECLARE @SearchString AS VARCHAR(100)='Vehicl%'
+DECLARE @SearchString AS VARCHAR(100)='<Enter Searchstring here>'
 
 SELECT 
 referencing_object_name = o.name
