@@ -1,0 +1,13 @@
+WITH last_proc_run (obj_id,db_id,proc_name,last_execution_time)
+AS
+(
+SELECT  d.object_id AS 'obj_id',
+		d.database_id AS 'db_id',
+		OBJECT_NAME(d.object_id, database_id) AS 'proc_name',
+		d.last_execution_time  as last_execution_time
+ FROM sys.dm_exec_procedure_stats AS d 
+)
+
+
+SELECT * FROM last_proc_run
+-- WHERE last_proc_run.proc_name = 
