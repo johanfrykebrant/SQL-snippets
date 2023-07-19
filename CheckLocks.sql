@@ -2,8 +2,6 @@ SELECT l.resource_type
     , l.resource_associated_entity_id
     , l.request_status
     , l.request_mode
-    , request_session_id
-    , ex.session_id
     , l.resource_description
     , o.object_id
     , o.name
@@ -20,5 +18,5 @@ SELECT l.resource_type
 FROM sys.dm_tran_locks l
 LEFT JOIN sys.dm_exec_sessions ex
     ON l.request_session_id = ex.session_id
-LEFT JOIN sys.objects o
+INNER JOIN sys.objects o
     ON l.resource_associated_entity_id = o.object_id
