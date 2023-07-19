@@ -8,7 +8,7 @@ SELECT l.resource_type
     , o.type_desc
     , ex.client_interface_name
     , ex.login_name
-    , ex.STATUS
+    , ex.status
     , ex.cpu_time
     , ex.memory_usage
     , ex.total_scheduled_time
