@@ -3,7 +3,7 @@ SELECT l.resource_type
     , l.request_status
     , l.request_mode
     , request_session_id
-	, ex.session_id
+    , ex.session_id
     , l.resource_description
     , o.object_id
     , o.name
